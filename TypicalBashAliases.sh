@@ -58,7 +58,7 @@ extract()
 }
 
 # Use netstat command to quickly list all TCP/UDP port on the server:
-alias ports='netstat -tulanp'
+alias ports='sudo netstat -tulanp'
 
 # Git branch getters:
 function getGitBranch()
