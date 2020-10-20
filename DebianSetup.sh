@@ -54,7 +54,7 @@ curl --version
 
 # Install the latest bash (because you're insane):
 
-git clone git://git.savannah.gnu.org/bash.gitl --depth=1
+git clone git://git.savannah.gnu.org/bash.git --depth=1
 pushd bash
 ./configure
 make -j6
