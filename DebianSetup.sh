@@ -44,6 +44,7 @@ sudo rm -rf ninja*
 ninja --version
 
 # Install the latest curl:
+
 git clone https://github.com/curl/curl --depth=1
 cd curl
 cmake -G "Ninja" .
