@@ -12,43 +12,43 @@ cd ~/
 # Install the latest git:
 
 git clone https://github.com/git/git --depth=1
-cd git
+pushd git
 sudo make -j6 prefix=/usr/local all
 sudo make -j6 prefix=/usr/local install
-cd ..
+popd
 rm -rf git*
 git --version
 
 # Install the latest cmake:
 
 git clone https://github.com/Kitware/CMake --depth=1
-cd CMake
+pushd CMake
 ./bootstrap && make -j6
 sudo make install
-cd ..
+popd
 sudo rm -rf CMake*
 cmake --version
 
 # Install the latest Ninja:
 
 git clone https://github.com/ninja-build/ninja --depth=1
-cd ninja
+pushd ninja
 CXX=clang++ ./configure.py
 ./configure.py --bootstrap
 sudo rm -rf /usr/bin/ninja
 sudo mv ninja /usr/bin/ninja
-cd ..
+popd
 sudo rm -rf ninja*
 ninja --version
 
 # Install the latest curl:
 
 git clone https://github.com/curl/curl --depth=1
-cd curl
+pushd curl
 cmake -G "Ninja" .
 ninja
 sudo ninja install
-cd ..
+popd
 rm -rf curl*
 curl --version
 
