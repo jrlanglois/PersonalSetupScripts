@@ -3,8 +3,7 @@
 # Ubuntu
 
 sudo apt update && sudo apt upgrade && sudo apt dist-upgrade
-sudo apt-get install -y build-essential dkms automake apt-transport-https ninja-build subversion git curl python python3 gcc-multilib g++-multilib genisoimage xorriso libavahi-compat-libdnssd-dev zlib1g-dev xclip libssl-dev libcurl4-openssl-dev checkinstall zlib1g-dev libexpat1-dev sshpass libssl-dev libasound2-dev libx11-dev libxinerama-dev libxext-dev libfreetype6-dev libwebkit2gtk-4.0-dev libglu1-mesa-dev
-sudo apt-get install -y multiarch-support # This one is for Ubuntu only
+sudo apt-get install -y build-essential dkms automake apt-transport-https ninja-build subversion git curl python python3 multiarch-support gcc-multilib g++-multilib genisoimage xorriso libavahi-compat-libdnssd-dev zlib1g-dev xclip libssl-dev libcurl4-openssl-dev checkinstall zlib1g-dev libexpat1-dev sshpass libssl-dev libasound2-dev libx11-dev libxinerama-dev libxext-dev libfreetype6-dev libwebkit2gtk-4.0-dev libglu1-mesa-dev
 sudo apt update && sudo apt upgrade && sudo apt dist-upgrade
 
 # Start off from your home folder.
