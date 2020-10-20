@@ -1,4 +1,4 @@
-# This place is really just hackery for a fast Ubuntu for myself
+# This place is really just hackery for a fast Ubuntu environment for myself
 
 That's it, really.
 
