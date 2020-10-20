@@ -52,6 +52,17 @@ popd
 rm -rf curl*
 curl --version
 
+# Install the latest bash (because you're insane):
+
+git clone git://git.savannah.gnu.org/bash.gitl --depth=1
+pushd bash
+./configure
+make -j6
+sudo make install
+popd
+rm -rf bash*
+bash --version # You'll probably need to reboot first...
+
 # Install the latest vscode
 # Script is from here: https://code.visualstudio.com/docs/setup/linux
 
@@ -83,4 +94,3 @@ sudo apt remove --purge chromium*
 sudo apt clean
 sudo apt autoremove
 sudo apt update && sudo apt upgrade && sudo apt dist-upgrade
-
