@@ -93,5 +93,5 @@ sudo apt install google-chrome-stable
 sudo apt remove --purge libreoffice*
 sudo apt remove --purge chromium*
 sudo apt clean
-sudo apt autoremove
-sudo apt update && sudo apt upgrade && sudo apt dist-upgrade
+sudo apt autoremove -y
+sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y
