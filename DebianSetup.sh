@@ -69,7 +69,7 @@ fi
 sudo apt install firefox
 
 #
-# Let's face it - your tinfoil hatted buffoonery already has data on the Googles and Facebooks. Just install Chrome and stop crying already.
+# Let's face it - your tinfoil hatted buffoonery already has personal data on the Googles and Facebooks. Just install Chrome and stop crying already.
 #
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
