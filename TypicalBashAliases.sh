@@ -63,11 +63,9 @@ alias ports='netstat -tulanp'
 # Git branch getters:
 function getGitBranch()
 {
-    if [ -x /usr/bin/git ]; then
-        if [ -x $PWD/.git ]; then
-            echo "$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')"
-            return
-        fi
+    if git rev-parse --git-dir > /dev/null 2>&1; then
+        echo "$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')"
+        return
     fi
 
     echo ""
