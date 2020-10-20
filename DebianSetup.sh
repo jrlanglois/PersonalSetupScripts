@@ -88,6 +88,16 @@ sudo sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /e
 sudo apt update && sudo apt upgrade && sudo apt dist-upgrade
 sudo apt install google-chrome-stable
 
+# Install Consolas (best coding font imho. Don't give a shit what you think.)
+
+wget -O /tmp/YaHei.Consolas.1.12.zip https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/uigroupcode/YaHei.Consolas.1.12.zip
+unzip /tmp/YaHei.Consolas.1.12.zip
+sudo mkdir -p /usr/share/fonts/consolas
+sudo mv YaHei.Consolas.1.12.ttf /usr/share/fonts/consolas/
+sudo chmod 644 /usr/share/fonts/consolas/YaHei.Consolas.1.12.ttf
+cd /usr/share/fonts/consolas
+sudo mkfontscale && sudo mkfontdir && sudo fc-cache -fv
+
 # Get rid of any junk:
 
 sudo apt remove --purge libreoffice*
