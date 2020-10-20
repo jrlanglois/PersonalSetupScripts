@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 #
 # Colour & text styling variables to cut down on nonsense:
