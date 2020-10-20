@@ -73,7 +73,7 @@ function getGitBranch()
 
 function prettyPrintGitBranch()
 {
-    currentBranch=$(getGitBranch)
+    local currentBranch=$(getGitBranch)
 
     if [ -z "$currentBranch" ]; then
         echo ""
