@@ -2,7 +2,7 @@
 
 # Ubuntu
 
-sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
+sudo apt update && sudo apt upgrade && sudo apt dist-upgrade
 sudo apt-get install -y build-essential dkms automake ninja-build subversion git curl python python3 gcc-multilib g++-multilib genisoimage xorriso libavahi-compat-libdnssd-dev zlib1g-dev xclip libssl-dev libcurl4-openssl-dev checkinstall zlib1g-dev libexpat1-dev sshpass libssl-dev libasound2-dev libx11-dev libxinerama-dev libxext-dev libfreetype6-dev libwebkit2gtk-4.0-dev libglu1-mesa-dev
 sudo apt-get install -y multiarch-support # This one is for Ubuntu only
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
@@ -60,9 +60,9 @@ curl --version
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
 sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-sudo apt-get install apt-transport-https
-sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
-sudo apt-get install code
+sudo apt install apt-transport-https
+sudo apt update && sudo apt upgrade && sudo apt dist-upgrade
+sudo apt install code
 
 # Browser stuff:
 
@@ -70,13 +70,13 @@ sudo apt install firefox
 
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
-sudo apt-get install google-chrome-stable
+sudo apt update && sudo apt upgrade && sudo apt dist-upgrade
+sudo apt install google-chrome-stable
 
 # Get rid of any junk:
 
-sudo apt-get remove --purge libreoffice*
-sudo apt-get clean
-sudo apt-get autoremove
-sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
+sudo apt remove --purge libreoffice*
+sudo apt clean
+sudo apt autoremove
+sudo apt update && sudo apt upgrade && sudo apt dist-upgrade
 
