@@ -3,7 +3,7 @@ name: C++ - Build DemoRunner
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master ] # Note that 'master' is probably 'main' now...
   pull_request:
     branches: [ master ]
 
