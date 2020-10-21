@@ -1,0 +1,21 @@
+# Usually you stick this under ".github/workflows/cpp_demo_runner.yml" in your GitHub repository.
+name: C++ - Build DemoRunner
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+        - uses: actions/checkout@v2
+        - name: Install Ubuntu Crap
+          run: sudo apt-get update && sudo apt-get install libasound2-dev libcurl4-openssl-dev libx11-dev libxinerama-dev libxext-dev libfreetype6-dev libwebkit2gtk-4.0-dev libglu1-mesa-dev && sudo apt-get update
+        - name: Build DemoRunner
+          run: make -j4
+          working-directory: examples/DemoRunner/Builds/LinuxMakefile/
