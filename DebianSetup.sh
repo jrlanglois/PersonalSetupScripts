@@ -98,14 +98,6 @@ sudo chmod 644 /usr/share/fonts/consolas/YaHei.Consolas.1.12.ttf
 cd /usr/share/fonts/consolas
 sudo mkfontscale && sudo mkfontdir && sudo fc-cache -fv
 
-# Install Jenkins
-
-sudo wget -qO - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
-sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
-sudo apt update
-sudo apt install jenkins
-sudo ufw allow 8080
-
 # Get rid of any junk:
 
 sudo apt remove --purge libreoffice*
@@ -113,3 +105,14 @@ sudo apt remove --purge chromium*
 sudo apt clean
 sudo apt autoremove -y
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y
+
+# Install Jenkins
+
+sudo wget -qO - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt update
+sudo apt install jenkins
+sudo ufw allow 8080
+sudo systemctl start jenkins
+sudo systemctl status jenkins
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
