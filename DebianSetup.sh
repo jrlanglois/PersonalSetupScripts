@@ -104,6 +104,7 @@ sudo wget -qO - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-k
 sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 sudo apt update
 sudo apt install jenkins
+sudo ufw allow 8080
 
 # Get rid of any junk:
 
