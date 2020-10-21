@@ -88,7 +88,7 @@ sudo sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /e
 sudo apt update && sudo apt upgrade && sudo apt dist-upgrade
 sudo apt install google-chrome-stable
 
-# Install Consolas (best coding font imho. Don't give a shit what you think.)
+# Install Consolas (best coding font imho.)
 
 wget -O /tmp/YaHei.Consolas.1.12.zip https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/uigroupcode/YaHei.Consolas.1.12.zip
 unzip /tmp/YaHei.Consolas.1.12.zip
