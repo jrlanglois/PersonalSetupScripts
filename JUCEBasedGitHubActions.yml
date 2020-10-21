@@ -6,11 +6,74 @@ on:
     branches: [ master ] # Note that 'master' is probably 'main' now...
   pull_request:
     branches: [ master ]
+  release:
+    types: [ published, created, edited ]
+  schedule:
+    - cron: '*/15 * * * *'
 
 jobs:
-  build:
+  buildDebugUbuntu:
 
     runs-on: ubuntu-latest
+
+    steps:
+        - uses: actions/checkout@v2
+        - name: Install Ubuntu Crap
+          run: sudo apt-get update && sudo apt-get install libasound2-dev libcurl4-openssl-dev libx11-dev libxinerama-dev libxext-dev libfreetype6-dev libwebkit2gtk-4.0-dev libglu1-mesa-dev && sudo apt-get update
+        - name: Build DemoRunner
+          run: make -j4
+          working-directory: examples/DemoRunner/Builds/LinuxMakefile/
+
+  buildReleaseUbuntu:
+
+    runs-on: ubuntu-latest
+
+    steps:
+        - uses: actions/checkout@v2
+        - name: Install Ubuntu Crap
+          run: sudo apt-get update && sudo apt-get install libasound2-dev libcurl4-openssl-dev libx11-dev libxinerama-dev libxext-dev libfreetype6-dev libwebkit2gtk-4.0-dev libglu1-mesa-dev && sudo apt-get update
+        - name: Build DemoRunner
+          run: make -j4
+          working-directory: examples/DemoRunner/Builds/LinuxMakefile/
+
+  buildDebugMacOS:
+
+    runs-on: macos-latest
+
+    steps:
+        - uses: actions/checkout@v2
+        - name: Install Ubuntu Crap
+          run: sudo apt-get update && sudo apt-get install libasound2-dev libcurl4-openssl-dev libx11-dev libxinerama-dev libxext-dev libfreetype6-dev libwebkit2gtk-4.0-dev libglu1-mesa-dev && sudo apt-get update
+        - name: Build DemoRunner
+          run: make -j4
+          working-directory: examples/DemoRunner/Builds/LinuxMakefile/
+
+  buildReleaseMacOS:
+
+    runs-on: macos-latest
+
+    steps:
+        - uses: actions/checkout@v2
+        - name: Install Ubuntu Crap
+          run: sudo apt-get update && sudo apt-get install libasound2-dev libcurl4-openssl-dev libx11-dev libxinerama-dev libxext-dev libfreetype6-dev libwebkit2gtk-4.0-dev libglu1-mesa-dev && sudo apt-get update
+        - name: Build DemoRunner
+          run: make -j4
+
+  buildDebugWindows:
+
+    runs-on: windows-latest
+
+    steps:
+        - uses: actions/checkout@v2
+        - name: Install Ubuntu Crap
+          run: sudo apt-get update && sudo apt-get install libasound2-dev libcurl4-openssl-dev libx11-dev libxinerama-dev libxext-dev libfreetype6-dev libwebkit2gtk-4.0-dev libglu1-mesa-dev && sudo apt-get update
+        - name: Build DemoRunner
+          run: make -j4
+          working-directory: examples/DemoRunner/Builds/LinuxMakefile/
+
+  buildReleaseWindows:
+
+    runs-on: windows-latest
 
     steps:
         - uses: actions/checkout@v2
