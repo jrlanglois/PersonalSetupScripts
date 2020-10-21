@@ -3,9 +3,9 @@ name: C++ - Build DemoRunner
 
 on:
   push:
-    branches: [ master ] # Note that 'master' is probably 'main' now...
+    branches: [ master, develop ] # Note that 'master' is probably 'main' now...
   pull_request:
-    branches: [ master ]
+    branches: [ master, develop ]
   release:
     types: [ published, created, edited ]
   schedule:
