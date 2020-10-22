@@ -116,3 +116,11 @@ sudo ufw allow 8080
 sudo systemctl start jenkins
 sudo systemctl status jenkins
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+# Install Gradle (for Android)
+
+wget https://services.gradle.org/distributions/gradle-6.7-bin.zip
+sudo unzip -d /opt/gradle gradle-6.7-bin.zip
+sudo echo 'export GRADLE_HOME=/opt/gradle/gradle-6.7' >> ~/.bash_aliases
+sudo echo 'export PATH=${GRADLE_HOME}/bin:${PATH}' >> ~/.bash_aliases
+gradle -v
