@@ -7,6 +7,7 @@ sudo apt install -y openjdk-8-jdk openjdk-8-jre build-essential dkms jackd qjack
 sudo apt install -y multiarch-support # Note that this will exclusively work on Ubuntu!
 
 git config --global core.editor "code --wait"
+git config --global init.defaultBranch main
 
 # Start off from the home folder.
 
