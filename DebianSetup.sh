@@ -3,10 +3,17 @@
 # Ubuntu
 
 sudo apt update && sudo apt upgrade && sudo apt dist-upgrade
-sudo apt install -y openjdk-8-jdk openjdk-8-jre build-essential dkms jackd qjackctl automake apt-transport-https ninja-build subversion git curl python python3 gcc-multilib g++-multilib genisoimage xorriso libavahi-compat-libdnssd-dev zlib1g-dev xclip libssl-dev libcurl4-openssl-dev checkinstall zlib1g-dev libexpat1-dev sshpass libssl-dev libasound2-dev libx11-dev libxinerama-dev libxext-dev libfreetype6-dev libwebkit2gtk-4.0-dev libglu1-mesa-dev build-essential clang ladspa-sdk libjack-jackd2-dev libasound2-dev libcurl4-openssl-dev libx11-dev libxinerama-dev libxext-dev libfreetype6-dev libwebkit2gtk-4.0-dev libglu1-mesa-dev
-sudo apt update && sudo apt upgrade
 
-sudo apt install -y multiarch-support # Note that this will exclusively work on Ubuntu!
+# General Shite
+sudo apt install -y openjdk-8-jdk openjdk-8-jre build-essential dkms jackd qjackctl automake apt-transport-https ninja-build subversion git curl python python3 gcc-multilib g++-multilib genisoimage xorriso libavahi-compat-libdnssd-dev zlib1g-dev xclip libssl-dev libcurl4-openssl-dev checkinstall zlib1g-dev libexpat1-dev sshpass libssl-dev libasound2-dev libx11-dev libxinerama-dev libxext-dev libfreetype6-dev libwebkit2gtk-4.0-dev libglu1-mesa-dev
+
+# JUCE Shite
+sudo apt install -y build-essential clang ladspa-sdk libjack-jackd2-dev libasound2-dev libcurl4-openssl-dev libx11-dev libxinerama-dev libxext-dev libfreetype6-dev libwebkit2gtk-4.0-dev libglu1-mesa-dev
+
+# Cross-Build Shite. Note that this will exclusively work on Ubuntu!
+sudo apt install -y multiarch-support
+
+sudo apt update && sudo apt upgrade
 
 git config --global core.editor "code --wait"
 git config --global init.defaultBranch main
