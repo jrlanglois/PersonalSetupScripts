@@ -32,6 +32,15 @@ popd
 rm -rf git*
 git --version
 
+## For normal Ubuntu
+
+git lfs install
+
+## For wsl2
+
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+sudo apt-get install git-lfs
+
 # Install the latest cmake:
 
 git clone https://github.com/Kitware/CMake --depth=1
